@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Doação</title>
+  <link rel="stylesheet" href="styleDOACAO.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav>
+<div class="nav-logo">
+    <img src="/iconesrra-removebg-preview.png" alt="" class="escudo">
+    <span>SERRA</span>
+</div>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+
+    <li class="item-servicos">
+      <span class="btn-servicos" onclick="abrirMenu(event)">Serviços ▾</span>
+      <ul class="submenu" id="submenu">
+        <li><a href="/servicos.html">Vacinação</a></li>
+        <li><a href="/servicos.html">Castração</a></li>
+        <li><a href="/doacao.html">Doação</a></li>
+        <li><a href="/denuncia.html">Denúncia</a></li>
+        <li><a href="/resgate.html">Resgate</a></li>
+        <li><a href="/adocao.html">Adoção</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Quem Somos</a></li>
+    <li><a href="/campanhas.html">Campanhas Públicas</a></li>
+  </ul>
+  <a href="/login.html"><span class="nav-user">👤</span></a>
+</nav>
+
+<script>
+  function abrirMenu(event) {
+    event.stopPropagation();
+    var submenu = document.getElementById("submenu");
+    if (submenu.classList.contains("aberto")) {
+      submenu.classList.remove("aberto");
+    } else {
+      submenu.classList.add("aberto");
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.item-servicos')) {
+      document.getElementById('submenu').classList.remove('aberto');
+    }
+  });
+</script>
+```
+
+
+
+
+
+
+
+
+
+  <div class="hero">
+    <div class="hero-esq">
+      <span class="badge">FAÇA A DIFERENÇA</span>
+      <h1>Sua doação pode<br><span>salvar vidas.</span></h1>
+      <p>Cada contribuição financia resgates, tratamentos veterinários, vacinas e castrações para animais em situação de vulnerabilidade na Serra – ES.</p>
+      <div class="stats">
+        <div class="stat"><strong>+3.400</strong><span>Animais resgatados</span></div>
+        <div class="stat"><strong>R$ 0</strong><span>Taxa de administração</span></div>
+        <div class="stat"><strong>100%</strong><span>Revertido aos animais</span></div>
+      </div>
+    </div>
+    <div class="hero-dir">
+      <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=700" alt="gatinhos">
+      <div class="img-tag">98%<small>satisfação<br>dos doadores</small></div>
+    </div>
+  </div>
+
+  <!-- POR QUE DOAR -->
+  <section class="porque">
+    <h2>Porque sua doação é importante para a gente</h2>
+    <div class="porque-grid">
+      <div class="porque-item">
+        <span class="ic">🏥</span>
+        <div>
+          <h4>Atendimento Veterinário</h4>
+          <p>Consultas médicas, cirurgias e tratamentos de emergência.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <span class="ic">💊</span>
+        <div>
+          <h4>Vacinas e Medicamentos</h4>
+          <p>Manutenção e controle de doenças para cães e gatos.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <span class="ic">🏠</span>
+        <div>
+          <h4>Abrigo Temporário</h4>
+          <p>Alimentação e acomodação para animais em resgate.</p>
+        </div>
+      </div>
+      <div class="porque-item">
+        <span class="ic">🔍</span>
+        <div>
+          <h4>Resgates e Fiscalização</h4>
+          <p>Equipes de campo para atender denúncias de maus-tratos.</p>
+        </div>
+      </div>
+    </div>
+    <p class="porque-frase">Para proporcionarmos tudo isso para os animais que ajudamos é necessário um custo monetário muito alto, por isso sua doação é tão importante para nós</p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="form-wrap">
+
+    <div class="form-box">
+      <h2>Fazer uma Doação</h2>
+      <p class="sub">Simples, seguro e rápido — em menos de 2 minutos</p>
+
+      <span class="form-label">VALOR DA DOAÇÃO</span>
+      <div class="valores">
+        <button class="val-btn">R$ 10</button>
+        <button class="val-btn ativo">R$ 50</button>
+        <button class="val-btn">R$ 100</button>
+        <button class="val-btn">Outro</button>
+      </div>
+
+      <input class="form-input" type="text" placeholder="Seu nome">
+      <input class="form-input" type="email" placeholder="seuemail@email.com">
+
+      <span class="form-label">DADOS DO CARTÃO</span>
+      <div class="linha" style="margin-bottom:10px;">
+        <input class="form-input" type="text" placeholder="PIX" style="flex:1">
+        <input class="form-input" type="text" placeholder="Cartão de Crédito" style="flex:2">
+        <input class="form-input" type="text" placeholder="Boleto" style="flex:1">
+      </div>
+
+      <div class="pix-box">
+        <div class="pix-key">27.04.0637001-27</div>
+        <button class="btn-copiar">📋 Copiar Chave PIX</button>
+      </div>
+
+      <button class="btn-confirmar">Confirmar Doação</button>
+      <p class="seguro">🔒 pagamento 100% seguro e criptografado</p>
+    </div>
+
+    <div class="como-usada">
+      <h3>Como sua doação é usada</h3>
+      <div class="uso-card">
+        <span class="ic">🐾</span>
+        <div>
+          <h4>Saúde Animal</h4>
+          <p>Vacinas, medicamentos, consultas e procedimentos cirúrgicos para animais resgatados e em situação de vulnerabilidade.</p>
+        </div>
+      </div>
+      <div class="uso-card">
+        <span class="ic">🍖</span>
+        <div>
+          <h4>Alimentação e Abrigo</h4>
+          <p>Ração, água e espaço seguro para animais que aguardam adoção ou se recuperam de tratamentos médicos.</p>
+        </div>
+      </div>
+      <div class="uso-card">
+        <span class="ic">🚑</span>
+        <div>
+          <h4>Resgates de Emergência</h4>
+          <p>Equipes de campo disponíveis para atender denúncias e realizar resgates com segurança em toda a Serra.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div>
+      <h3>ARCA</h3>
+      <p>Apoio e Resgate à Causa Animal. Uma iniciativa da Prefeitura da Serra focada na saúde pública e no respeito aos animais.</p>
+    </div>
+    <div>
+      <div class="menu-titulo">MENU</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Quem Somos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 ARCA | Prefeitura da Serra – ES. Todos os direitos reservados.</div>
+
+  <script>
+    function abrirMenu() {
+      var submenu = document.getElementById("submenu");
+      if (submenu.classList.contains("aberto")) {
+        submenu.classList.remove("aberto");
+      } else {
+        submenu.classList.add("aberto");
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.item-servicos')) {
+        document.getElementById('submenu').classList.remove('aberto');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #333; background: white; }
+
+
+
+
+
+
+
+
+
+
+.escudo {
+    height: 40px;
+    width: auto;
+}
+
+
+nav {
+  background: #3a7d44;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: relative;
+  z-index: 100;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav ul a.ativo {
+  border-bottom: 2px solid #e07b2e;
+  padding-bottom: 2px;
+}
+
+.nav-user {
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.item-servicos {
+  position: relative;
+}
+
+.btn-servicos {
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+  min-width: 140px;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.submenu.aberto {
+  display: block;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 6px 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.submenu a:hover {
+  background: #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero { display: flex; padding: 50px 60px; gap: 50px; }
+.hero-esq { flex: 1; }
+.badge {
+  background: #fde8e8;
+  color: #c0392b;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.hero-esq h1 { font-size: 34px; font-weight: 900; color: #1a1a1a; line-height: 1.2; }
+.hero-esq h1 span { color: #e07b2e; font-style: italic; display: block; }
+.hero-esq p { font-size: 13px; color: #555; margin: 16px 0 24px; line-height: 1.7; }
+.btn-solicitar {
+  background: #e07b2e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.hero-dir { flex: 1; position: relative; padding-bottom: 20px; }
+.hero-dir img { width: 100%; height: 260px; object-fit: cover; border-radius: 16px; }
+.hero-card {
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  background: #2d5a35;
+  color: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: center;
+  min-width: 160px;
+}
+.hero-card strong { font-size: 26px; font-weight: 900; display: block; }
+.hero-card .label { font-size: 11px; color: #a5d6a7; margin-bottom: 8px; }
+.hero-card p { font-size: 10px; color: #ccc; line-height: 1.5; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.como-agir { padding: 40px 60px; text-align: center; border-top: 1px solid #eee; }
+.como-agir h2 { font-size: 20px; font-weight: bold; margin-bottom: 28px; }
+.passos { display: flex; gap: 20px; }
+.passo { flex: 1; text-align: left; }
+.passo .num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e07b2e;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.passo h3 { font-size: 13px; font-weight: bold; margin-bottom: 6px; }
+.passo p  { font-size: 11px; color: #666; line-height: 1.6; }
+
+
+
+
+
+
+
+
+
+
+
+
+.formulario { margin: 10px 60px 40px; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; }
+.formulario h2 { font-size: 20px; text-align: center; margin-bottom: 6px; }
+.formulario .sub { font-size: 12px; color: #888; text-align: center; margin-bottom: 24px; }
+.campo { display: flex; flex-direction: column; margin-bottom: 16px; }
+.campo label { font-size: 12px; color: #555; margin-bottom: 5px; }
+.campo input, .campo textarea, .campo select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  background: white;
+}
+.campo textarea { height: 90px; resize: none; }
+.linha { display: flex; gap: 16px; }
+.linha .campo { flex: 1; }
+.btn-enviar {
+  width: 100%;
+  padding: 14px;
+  background: #e07b2e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.mapa-wrap { margin: 0 60px 40px; border-radius: 12px; overflow: hidden; height: 200px; position: relative; }
+.mapa-wrap iframe { width: 100%; height: 100%; border: none; }
+.area-box {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 11px;
+  max-width: 200px;
+}
+.area-box h4 { font-size: 13px; font-weight: bold; margin-bottom: 4px; }
+.area-box p  { color: #666; line-height: 1.5; }
+
+
+
+
+
+
+
+
+
+
+
+
+.historias { padding: 40px 60px; text-align: center; }
+.historias h2 { font-size: 22px; font-weight: bold; margin-bottom: 6px; }
+.historias .sub { font-size: 12px; color: #888; margin-bottom: 28px; }
+.slider { display: flex; align-items: center; gap: 16px; }
+.seta {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-hist { display: flex; gap: 16px; flex: 1; }
+.card-hist { flex: 1; }
+.card-hist img { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+.card-hist h3 { font-size: 13px; font-weight: bold; margin-bottom: 4px; }
+.card-hist p  { font-size: 11px; color: #777; line-height: 1.5; }
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  background: #2d5a35;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 60px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 20px;
+}
+footer h3 { font-size: 22px; font-weight: 900; margin-bottom: 14px; }
+footer p  { font-size: 13px; color: #ccc; line-height: 1.8; }
+footer ul { list-style: none; }
+footer ul li { margin-bottom: 10px; }
+footer ul a { color: #ccc; text-decoration: none; font-size: 14px; }
+.menu-titulo { font-size: 16px; font-weight: bold; margin-bottom: 16px; color: white; }
+.footer-bottom { background: #2d5a35; color: #777; text-align: center; padding: 14px; font-size: 12px; border-top: 1px solid #3a7d44; }

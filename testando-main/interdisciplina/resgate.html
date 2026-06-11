@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Resgate</title>
+  <link rel="stylesheet" href="styleRESGATE.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav>
+<div class="nav-logo">
+    <img src="/imagens e icones/iconesrra-removebg-preview.png" alt="" class="escudo">
+    <span>SERRA</span>
+</div>
+  <ul>
+    <li><a href="/servicos/index/index.html">Home</a></li>
+
+    <li class="item-servicos">
+      <span class="btn-servicos" onclick="abrirMenu(event)">Serviços ▾</span>
+      <ul class="submenu" id="submenu">
+        <li><a href="/servicos.html">Vacinação</a></li>
+        <li><a href="/servicos.html">Castração</a></li>
+        <li><a href="/doacao.html">Doação</a></li>
+        <li><a href="/denuncia.html">Denúncia</a></li>
+        <li><a href="/resgate.html">Resgate</a></li>
+        <li><a href="/adocao.html">Adoção</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Quem Somos</a></li>
+    <li><a href="/servicos/campanhas pub/campanhas.html">Campanhas Públicas</a></li>
+  </ul>
+  <a href="/servicos/index/login.html"><span class="nav-user">👤</span></a>
+</nav>
+
+<script>
+  function abrirMenu(event) {
+    event.stopPropagation();
+    var submenu = document.getElementById("submenu");
+    if (submenu.classList.contains("aberto")) {
+      submenu.classList.remove("aberto");
+    } else {
+      submenu.classList.add("aberto");
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.item-servicos')) {
+      document.getElementById('submenu').classList.remove('aberto');
+    }
+  });
+</script>
+
+
+
+
+
+  <div class="hero">
+    <div class="hero-esq">
+      <span class="badge">SERVIÇO DE RESGATE</span>
+      <h1>Cada segundo conta<br><span>para quem não tem voz.</span></h1>
+      <p>O programa ARCA é dedicado ao resgate de animais em situação de risco extremo, maus-tratos ou abandono na Serra. Nossa equipe técnica atua com urgência e empatia.</p>
+      <button class="btn-solicitar">🔴 Solicitar Agora</button>
+    </div>
+    <div class="hero-dir">
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=700" alt="animal resgatado">
+      <div class="hero-card">
+        <div class="coracao">❤️</div>
+        <strong>+1.200</strong>
+        <div class="label">Vidas Salvas este Ano</div>
+        <p>Cada atendimento representa uma oportunidade de mudar um destino para sempre.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="como-agir">
+    <h2>Como agir em emergências?</h2>
+    <div class="passos">
+      <div class="passo">
+        <div class="num">1</div>
+        <h3>Mantenha a Calma</h3>
+        <p>Sua tranquilidade ajuda o animal a não se sentir mais ameaçado.</p>
+      </div>
+      <div class="passo">
+        <div class="num">2</div>
+        <h3>Fotografe e Filme</h3>
+        <p>Evidências visuais ajudam nossa equipe a preparar os equipamentos certos.</p>
+      </div>
+      <div class="passo">
+        <div class="num">3</div>
+        <h3>Localize Precisamente</h3>
+        <p>Envie a localização ou pontos de referência próximos para agilizar.</p>
+      </div>
+      <div class="passo">
+        <div class="num">4</div>
+        <h3>Preencha o Formulário</h3>
+        <p>Utilize nosso sistema abaixo para oficializar o pedido de resgate.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="formulario">
+    <h2>Solicitar Resgate</h2>
+    <p class="sub">Ao preencher este formulário, sua solicitação entra imediatamente em A fila de triagem prioritária.</p>
+
+    <div class="campo">
+      <label>Tipo de Animal</label>
+      <select><option>Cachorro</option><option>Gato</option><option>Outro</option></select>
+    </div>
+
+    <div class="linha">
+      <div class="campo">
+        <label>Seu Nome</label>
+        <input type="text" placeholder="Nome Completo">
+      </div>
+      <div class="campo">
+        <label>Telefone de Contato</label>
+        <input type="text" placeholder="(27) 00000-0000">
+      </div>
+    </div>
+
+    <div class="campo">
+      <label>Descrição da Situação</label>
+      <textarea placeholder="Descreva o estado do animal o local..."></textarea>
+    </div>
+
+    <div class="campo">
+      <label>Localização Aproximada</label>
+      <input type="text" placeholder="🔍  Rua, Número, Bairro...">
+    </div>
+
+    <button class="btn-enviar">▶ Enviar Solicitação Urgente</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="mapa-wrap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.0!2d-40.307!3d-20.128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzQwLjgiUyA0MMKwMTgnMjUuMiJX!5e0!3m2!1spt-BR!2sbr!4v1" allowfullscreen loading="lazy"></iframe>
+    <div class="area-box">
+      <h4>Área de Cobertura</h4>
+      <p>Atendemos em todas as 63 bairros municipais da Serra, incluindo áreas rurais e de difícil acesso. Nossa equipe está pronta para atender em qualquer ponto do município.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="historias">
+    <h2>Histórias de Esperança</h2>
+    <p class="sub">Casos recentes que transformaram vidas através do nosso atendimento.</p>
+    <div class="slider">
+      <button class="seta">‹</button>
+      <div class="cards-hist">
+        <div class="card-hist">
+          <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=400" alt="Resgate BR-101">
+          <h3>Resgate na BR-101</h3>
+          <p>Encontrado ferido, hoje vive em um lar amoroso após reabilitação completa em nossa unidade.</p>
+        </div>
+        <div class="card-hist">
+          <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400" alt="Ninhada Abandonada">
+          <h3>Ninhada Abandonada</h3>
+          <p>Quatro filhotes resgatados de uma caixa de papelão sob chuva, agora vacinados e prontos para adoção.</p>
+        </div>
+        <div class="card-hist">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400" alt="Resgate animais presos">
+          <h3>Resgate de animais presos</h3>
+          <p>Três cachorros são libertados do cativeiro em condições precárias para saúde deles, sem ferrar dívidos pela ONG amigos da pata para Voluntariar.</p>
+        </div>
+      </div>
+      <button class="seta">›</button>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div>
+      <h3>ARCA</h3>
+      <p>Apoio e Resgate à Causa Animal. Uma iniciativa da Prefeitura da Serra focada na saúde pública e no respeito aos animais.</p>
+    </div>
+    <div>
+      <div class="menu-titulo">MENU</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Quem Somos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 ARCA | Prefeitura da Serra – ES. Todos os direitos reservados.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function abrirMenu() {
+      var submenu = document.getElementById("submenu");
+      if (submenu.classList.contains("aberto")) {
+        submenu.classList.remove("aberto");
+      } else {
+        submenu.classList.add("aberto");
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.item-servicos')) {
+        document.getElementById('submenu').classList.remove('aberto');
+      }
+    });
+  </script>
+
+</body>
+</html>

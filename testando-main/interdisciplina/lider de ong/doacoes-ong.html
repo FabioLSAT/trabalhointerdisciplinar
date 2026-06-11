@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Doações ONG</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; display: flex; min-height: 100vh; background: #f5f5f5; }
+
+   
+
+
+
+
+
+
+    .sidebar {
+      width: 180px; background: #2d5a35; min-height: 100vh;
+      display: flex; flex-direction: column; padding: 20px 0; flex-shrink: 0;
+    }
+    .sidebar-logo {
+      color: white; font-size: 13px; font-weight: bold;
+      padding: 0 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px;
+    }
+    .sidebar-logo .escudo { font-size: 22px; display: block; margin-bottom: 4px; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li a {
+      display: block; padding: 11px 20px;
+      color: #a5d6a7; text-decoration: none; font-size: 13px; letter-spacing: 0.5px;
+    }
+    .sidebar ul li.ativo a {
+      color: white; font-weight: bold;
+      border-bottom: 2px solid white; padding-bottom: 9px;
+    }
+
+  
+
+
+
+
+
+
+
+    .content { flex: 1; padding: 36px 40px; }
+    .content h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+    .content .sub { font-size: 12px; color: #888; margin-bottom: 24px; }
+
+    
+
+
+
+
+    .layout { display: flex; gap: 20px; align-items: flex-start; }
+    .main { flex: 1; }
+    .side-cards { display: flex; flex-direction: column; gap: 14px; width: 180px; flex-shrink: 0; }
+
+    
+
+
+
+
+
+
+    .grafico-box {
+      background: white; border-radius: 10px; padding: 20px; margin-bottom: 20px;
+    }
+    .grafico-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .grafico-header h3 { font-size: 14px; font-weight: bold; }
+    .grafico-header span { font-size: 11px; color: #888; }
+
+    
+
+
+
+
+
+
+
+    .barras { display: flex; align-items: flex-end; gap: 10px; height: 100px; }
+    .barra-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+    .barra { width: 100%; background: #e8f5e9; border-radius: 4px 4px 0 0; }
+    .barra.destaque { background: #e07b2e; }
+    .barra-label { font-size: 9px; color: #aaa; }
+
+  
+
+
+
+
+
+
+    .tabela-box { background: white; border-radius: 10px; overflow: hidden; }
+    .tabela-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 20px; background: #f9f9f9; border-bottom: 1px solid #eee;
+    }
+    .tabela-header h3 { font-size: 14px; font-weight: bold; }
+    .tabela-header a  { font-size: 12px; color: #3a7d44; text-decoration: none; }
+
+    table { width: 100%; border-collapse: collapse; }
+    thead th {
+      text-align: left; font-size: 11px; color: #888; font-weight: normal;
+      padding: 10px 16px; border-bottom: 1px solid #eee; text-transform: uppercase;
+    }
+    tbody td { padding: 12px 16px; font-size: 12px; border-bottom: 1px solid #f5f5f5; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: #fafafa; }
+
+    .tag-status {
+      padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: bold;
+    }
+    .confirmado { background: #e8f5e9; color: #2e7d32; }
+    .pendente   { background: #fff3e0; color: #e65100; }
+    .processando { background: #e3f2fd; color: #1565c0; }
+
+    .paginacao { display: flex; gap: 6px; padding: 14px 16px; justify-content: flex-end; }
+    .paginacao button {
+      width: 28px; height: 28px; border-radius: 4px;
+      border: 1px solid #ddd; background: white; font-size: 12px; cursor: pointer;
+    }
+    .paginacao button.ativo { background: #3a7d44; color: white; border-color: #3a7d44; }
+
+    
+
+
+
+
+
+
+
+
+    .stat-card {
+      background: white; border-radius: 10px; padding: 16px;
+    }
+    .stat-card .label { font-size: 10px; color: #888; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+    .stat-card .label .ic { font-size: 16px; }
+    .stat-card .valor { font-size: 18px; font-weight: 900; color: #1a1a1a; }
+    .stat-card .valor.verde { color: #2e7d32; }
+    .stat-card .desc { font-size: 11px; color: #888; margin-top: 4px; }
+    .dot-ativo { width: 8px; height: 8px; border-radius: 50%; background: #2e7d32; display: inline-block; }
+  </style>
+</head>
+<body>
+
+ 
+
+
+
+
+
+
+
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <span class="escudo">🛡️</span>
+      SERRA
+    </div>
+    <ul>
+      <li><a href="#">MINHA CONTA</a></li>
+      <li><a href="#">CAMPANHAS</a></li>
+      <li><a href="#">ANIMAIS</a></li>
+      <li class="ativo"><a href="/lider de ong/doacoes-ong.html">DOAÇÕES</a></li>
+      <li><a href="/lider de ong/adocoes.html">ADOÇÕES</a></li>
+      <li><a href="#">NOTIFICAÇÕES</a></li>
+      <li><a href="#">ACESSOS</a></li>
+      <li><a href="#">SESSÕES</a></li>
+      <li><a href="#">PARCEIROS</a></li>
+      <li><a href="/servicos/index/index (2).html">HOME</a></li>
+    </ul>
+  </div>
+
+
+
+  
+  <div class="content">
+    <h1>Registro de Doações da ONG</h1>
+    <p class="sub">Visualize como a comunidade está recebendo suas doações</p>
+
+    <div class="layout">
+
+    
+
+
+
+
+
+
+      <div class="main">
+
+        
+
+        <div class="grafico-box">
+          <div class="grafico-header">
+            <h3>Histórico de Arrecadação</h3>
+            <span>AGO - 2024</span>
+          </div>
+          <div class="barras">
+            <div class="barra-wrap"><div class="barra" style="height:40px"></div><span class="barra-label">Jan</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:55px"></div><span class="barra-label">Fev</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:35px"></div><span class="barra-label">Mar</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:65px"></div><span class="barra-label">Abr</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:50px"></div><span class="barra-label">Mai</span></div>
+            <div class="barra-wrap"><div class="barra destaque" style="height:90px"></div><span class="barra-label">Jun</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:70px"></div><span class="barra-label">Jul</span></div>
+            <div class="barra-wrap"><div class="barra" style="height:80px"></div><span class="barra-label">Ago</span></div>
+          </div>
+        </div>
+
+        
+
+
+
+
+
+        <div class="tabela-box">
+          <div class="tabela-header">
+            <h3>Últimas Doações</h3>
+            <a href="#">Ver todas</a>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>DOADOR</th>
+                <th>CAMPANHA</th>
+                <th>DATA</th>
+                <th>VALOR</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria Oliveira Silva</td>
+                <td>Resgate Urgente - Lote 4</td>
+                <td>14 Jun 2024</td>
+                <td><strong>R$ 140,00</strong></td>
+                <td><span class="tag-status confirmado">Confirmado</span></td>
+              </tr>
+              <tr>
+                <td>Empresa Fortunes S.A.</td>
+                <td>Manutenção Abrigo</td>
+                <td>13 Jun 2024</td>
+                <td><strong>R$ 2.500,00</strong></td>
+                <td><span class="tag-status confirmado">Confirmado</span></td>
+              </tr>
+              <tr>
+                <td>João Contas Mendes</td>
+                <td>Castração Solidária</td>
+                <td>13 Jun 2024</td>
+                <td><strong>R$ 50,00</strong></td>
+                <td><span class="tag-status pendente">Pendente</span></td>
+              </tr>
+              <tr>
+                <td>Ana Paula Souza</td>
+                <td>Resgate Urgente - Lote 4</td>
+                <td>12 Jun 2024</td>
+                <td><strong>R$ 200,00</strong></td>
+                <td><span class="tag-status confirmado">Confirmado</span></td>
+              </tr>
+              <tr>
+                <td style="color:#aaa;">Anônimo</td>
+                <td>Fundo Geral ARCA</td>
+                <td>12 Jun 2024</td>
+                <td><strong>R$ 100,00</strong></td>
+                <td><span class="tag-status processando">Processando</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paginacao">
+            <button class="ativo">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>›</button>
+          </div>
+        </div>
+
+      </div>
+
+      
+
+
+
+
+
+      
+      <div class="side-cards">
+
+        <div class="stat-card">
+          <div class="label">
+            <span>Total Arrecadado</span>
+            <span class="dot-ativo"></span>
+          </div>
+          <div class="valor verde">R$ 145.200,00</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="label">
+            <span>Doações Este Mês</span>
+            <span class="ic">💛</span>
+          </div>
+          <div class="valor">843</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="label">
+            <span>Campanhas Ativas</span>
+            <span class="ic">📢</span>
+          </div>
+          <div class="valor">12</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="label">
+            <span>Meta Global</span>
+          </div>
+          <div class="valor">R$ 200.000,00</div>
+          <div class="desc">73% atingido</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Serviços</title>
+  <link rel="stylesheet" href="styleSERVICO.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav>
+<div class="nav-logo">
+    <img src="/iconesrra-removebg-preview.png" alt="" class="escudo">
+    <span>SERRA</span>
+</div>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+
+    <li class="item-servicos">
+      <span class="btn-servicos" onclick="abrirMenu(event)">Serviços ▾</span>
+      <ul class="submenu" id="submenu">
+        <li><a href="/servicos.html">Vacinação</a></li>
+        <li><a href="/servicos.html">Castração</a></li>
+        <li><a href="/doacao.html">Doação</a></li>
+        <li><a href="/denuncia.html">Denúncia</a></li>
+        <li><a href="/resgate.html">Resgate</a></li>
+        <li><a href="/adocao.html">Adoção</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Quem Somos</a></li>
+    <li><a href="/campanhas.html">Campanhas Públicas</a></li>
+  </ul>
+  <a href="/login.html"><span class="nav-user">👤</span></a>
+</nav>
+
+<script>
+  function abrirMenu(event) {
+    event.stopPropagation();
+    var submenu = document.getElementById("submenu");
+    if (submenu.classList.contains("aberto")) {
+      submenu.classList.remove("aberto");
+    } else {
+      submenu.classList.add("aberto");
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.item-servicos')) {
+      document.getElementById('submenu').classList.remove('aberto');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  <div class="hero">
+    <div class="hero-esq">
+      <span class="badge">SAÚDE ANIMAL PÚBLICA</span>
+      <h1>Saúde que protege e<br><span class="laranja">transforma.</span></h1>
+      <p>O programa de serviços veterinários da Prefeitura da Serra oferece vacinação e castração gratuitas para garantir o bem-estar animal e a saúde de toda a comunidade.</p>
+      <div class="stats">
+        <div class="stat">
+          <strong>+1.500</strong>
+          <span>Castrações realizadas</span>
+        </div>
+        <div class="stat">
+          <strong>+8.200</strong>
+          <span>Animais vacinados em 2025</span>
+        </div>
+      </div>
+      <div class="btns">
+        <a href="formulario-servicosVETERINARIOS.html" class="btn-dark">Agendar Serviço</a>
+        <button class="btn-out">Ver Meus Agendamentos</button>
+      </div>
+    </div>
+    <div class="hero-dir">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700" alt="cachorro">
+      <div class="img-tag">12k+ de animais<br>tratados e cuidados<br>por ano</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="sec-titulo">
+    <div class="sec-label">NOSSOS SERVIÇOS</div>
+    <h2>Vacinação e Castração Gratuitas</h2>
+    <p>Serviços gratuitos para moradores de Serra – ES. Agende e compareça com os documentos necessários.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="dois-cards">
+
+    <div class="card-vac">
+      <div class="vac-header">
+        <h3>Vacinação</h3>
+        <p>Para cães e gatos — totalmente gratuita</p>
+      </div>
+      <div class="vac-grid">
+        <div class="vac-item">
+          <h4>Para Cães</h4>
+          <p>Antirrábica, V10, Giardíase, Leishmaniose e Gripe Canina</p>
+        </div>
+        <div class="vac-item">
+          <h4>Para Gatos</h4>
+          <p>Antirrábica, Tríplice Felina e Leucemia Felina</p>
+        </div>
+        <div class="vac-item">
+          <h4>Periodicidade</h4>
+          <p>Reforço anual obrigatório para manter imunidade</p>
+        </div>
+        <div class="vac-item">
+          <h4>Onde</h4>
+          <p>Clínicas parceiras e unidades de saúde animal</p>
+        </div>
+      </div>
+      <div class="docs-box">
+        <h4>Documentos necessários</h4>
+        <ul>
+          <li>RG e CPF do Tutor</li>
+          <li>Comprovante de residência em Serra – ES</li>
+          <li>Carteira de vacinação anterior (se houver)</li>
+        </ul>
+      </div>
+      <div class="vac-footer">
+        <a href="/formulario-servicosVETERINARIOS.html" class="btn-laran">Agendar Serviço</a>
+      </div>
+    </div>
+
+    <div class="card-cas">
+      <div class="cas-header">
+        <div class="cas-icon">✂️</div>
+        <div>
+          <h3>Castração</h3>
+          <p>Controle responsável — procedimento gratuito</p>
+        </div>
+      </div>
+
+      <div class="passos">
+        <div class="passo">
+          <div class="num">1</div>
+          <div><h4>Agendamento</h4><p>Escolha data e clínica disponível</p></div>
+        </div>
+        <div class="passo">
+          <div class="num">2</div>
+          <div><h4>Pré-operatório</h4><p>Orientações de jejum e cuidados antes da cirurgia</p></div>
+        </div>
+        <div class="passo">
+          <div class="num">3</div>
+          <div><h4>Cirurgia</h4><p>Procedimento com equipe veterinária qualificada</p></div>
+        </div>
+        <div class="passo">
+          <div class="num">4</div>
+          <div><h4>Recuperação e Pós-operatório</h4><p>Orientações e medicações conforme prescrição</p></div>
+        </div>
+      </div>
+
+      <div class="req-grid">
+        <div class="req-item">
+          <span class="check">✅</span>
+          <div><h5>Residência na Serra</h5><p>Município da Serra – ES</p></div>
+        </div>
+        <div class="req-item">
+          <span class="check">✅</span>
+          <div><h5>Idade do Animal</h5><p>Entre 6 meses e 7 anos</p></div>
+        </div>
+        <div class="req-item">
+          <span class="check">✅</span>
+          <div><h5>Estado de Saúde</h5><p>Saudável, sem doenças ativas</p></div>
+        </div>
+        <div class="req-item">
+          <span class="check">✅</span>
+          <div><h5>Peso Adequado</h5><p>Dentro do peso ideal</p></div>
+        </div>
+      </div>
+
+      <div class="docs-cas">
+        <div class="label-doc">📎 Documentos</div>
+        <p>RG, CPF, comprovante de residência, cartão de vacinas e foto do animal. Arquivos PDF ou JPG, máx. 5 MB.</p>
+      </div>
+
+        <a href="formulario-servicosVETERINARIOS.html" class="btn-laran">Agendar Serviço</a>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div>
+      <h3>ARCA</h3>
+      <p>Apoio e Resgate à Causa Animal. Uma iniciativa da Prefeitura da Serra focada na saúde pública e no respeito aos animais.</p>
+    </div>
+    <div>
+      <div class="menu-titulo">MENU</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Quem Somos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 ARCA | Prefeitura da Serra – ES. Todos os direitos reservados.</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function abrirMenu() {
+      var submenu = document.getElementById("submenu");
+      if (submenu.classList.contains("aberto")) {
+        submenu.classList.remove("aberto");
+      } else {
+        submenu.classList.add("aberto");
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.item-servicos')) {
+        document.getElementById('submenu').classList.remove('aberto');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <nav>
+<div class="nav-logo">
+    <img src="/iconesrra-removebg-preview.png" alt="" class="escudo">
+    <span>SERRA</span>
+</div>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+
+    <li class="item-servicos">
+      <span class="btn-servicos" onclick="abrirMenu(event)">Serviços ▾</span>
+      <ul class="submenu" id="submenu">
+        <li><a href="/servicos.html">Vacinação</a></li>
+        <li><a href="/servicos.html">Castração</a></li>
+        <li><a href="/doacao.html">Doação</a></li>
+        <li><a href="/denuncia.html">Denúncia</a></li>
+        <li><a href="/resgate.html">Resgate</a></li>
+        <li><a href="/adocao.html">Adoção</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Quem Somos</a></li>
+    <li><a href="/campanhas.html">Campanhas Públicas</a></li>
+  </ul>
+  <a href="/login.html"><span class="nav-user">👤</span></a>
+</nav>
+
+<script>
+  function abrirMenu(event) {
+    event.stopPropagation();
+    var submenu = document.getElementById("submenu");
+    if (submenu.classList.contains("aberto")) {
+      submenu.classList.remove("aberto");
+    } else {
+      submenu.classList.add("aberto");
+    }
+  }
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.item-servicos')) {
+      document.getElementById('submenu').classList.remove('aberto');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400" alt="cachorro">
+    <div class="hero-overlay">
+      <h1>CUIDADO E<br>PROTEÇÃO PARA<br>QUEM MAIS PRECISA.</h1>
+      <p>O Portal ARCA centraliza as ações de bem-estar animal da Prefeitura da Serra, oferecendo serviços gratuitos de saúde e identificação para pets da nossa comunidade.</p>
+    </div>
+  </div>
+
+  <section class="como-ajudar">
+    <h2>Como podemos ajudar hoje?</h2>
+
+    <div class="cards-row">
+      <div class="card">
+      <img src="/1.png" alt="descrição">
+        <h3>Serviços Veterinários</h3>
+        <p>O serviço veterinário é essencial para garantir a saúde animal, a saúde pública e a sustentabilidade ecológica.</p>
+        <a href="/servicos/servicoVET/servicos.html"><button class="btn-verde">Agendar</button></a>
+      </div>
+      <div class="card">
+        <img src="/2.png" alt="descrição">
+        <h3>Adoção Responsável</h3>
+        <p>Encontre um novo membro para sua família e transforme uma vida para sempre.</p>
+        <a href="/servicos/adocao/adocao.html"><button class="btn-marrom">Ver animais</button></a>
+      </div>
+      <div class="card">
+        <img src="/3.png" alt="descrição">
+        <h3>Resgate</h3>
+        <p>Atendimento a animais atropelados ou em situação crítica de saúde em vias públicas.</p>
+        <a href="/servicos/resgate/resgate.html"><button class="btn-verm">Solicitar</button></a>
+      </div>
+      <div class="card">
+        <img src="/4.png" alt="descrição">
+        <h3>Denúncia</h3>
+        <p>Não se cale diante de maus-tratos. Denuncie e ajude a proteger quem não tem voz.</p>
+        <a href="/servicos/denuncia/denuncia.html"><button class="btn-laran">Denunciar</button></a>
+      </div>
+    </div>
+
+    <div class="card-center">
+      <div class="card">
+        <img src="/6.png" alt="descrição">
+        <h3>Doações</h3>
+        <p>As doações para ONGs de animais são o combustível que mantém o resgate, o tratamento e a reabilitação de milhares de animais em situação de vulnerabilidade.</p>
+        <a href="/doacao.html"><button class="btn-azul">Doar</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="projeto">
+    <div class="projeto-texto">
+      <h2>O Projeto Arca</h2>
+      <p>
+        O Projeto ARCA (Animais Resgatados, Cuidados e Acolhidos) é uma iniciativa digital da Prefeitura da Serra – ES que conecta a população aos serviços públicos de proteção animal. Pela plataforma, o cidadão pode solicitar resgates, agendar castrações, cadastrar-se para adoção e denunciar maus-tratos — tudo de forma simples e acessível. Mais do que um sistema, o ARCA é um compromisso com o bem-estar animal e a responsabilidade social do município.
+      </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=700" alt="cachorro resgatado">
+  </section>
+
+  <section class="canais">
+    <h2>📞 Canais de Atendimento e Orientações</h2>
+    <p class="sub">O Programa Arca (Animais Resgatados, Cuidados e Acolhidos) da Serra atende animais de rua com ferimentos graves ou vítimas de maus-tratos.</p>
+    <div class="canais-btns">
+      <a href="#">
+        <span class="ic">💬</span>
+        <span class="info-tel">
+          <span class="tipo">WHATSAPP</span>
+          <span class="numero">(27) 98166-0447</span>
+          <span class="hora">das 8h às 18h</span>
+        </span>
+      </a>
+      <a href="#">
+        <span class="ic">📞</span>
+        <span class="info-tel">
+          <span class="tipo">TELEFONE FIXO</span>
+          <span class="numero">(27) 3291-2399</span>
+          <span class="hora">das 8h às 18h</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>Informações importantes</h2>
+    <p class="sub">Tudo o que você precisa saber para garantir a saúde e os direitos dos animais na nossa cidade.</p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Quem pode solicitar?</h4>
+        <p>Moradores da Serra cadastrados o protetores independentes com registro ativo.</p>
+      </div>
+      <div class="info-card">
+        <h4>Idade Mínima</h4>
+        <p>Cães e gatos devem ter entre 6 meses e 7 anos de idade para o procedimento.</p>
+      </div>
+      <div class="info-card">
+        <h4>Pós-Operatório</h4>
+        <p>A prefeitura fornece as guias, mas medicamentos e colar elisabetano são de responsabilidade do tutor.</p>
+      </div>
+      <div class="info-card">
+        <h4>Prazo de Resgate</h4>
+        <p>O atendimento para resgates ocorre em até 24h úteis após a triagem técnica.</p>
+      </div>
+      <div class="info-card">
+        <h4>Legislação</h4>
+        <p>Conheça o Código de Proteção Animal da Serra e seus direitos e deveres.</p>
+      </div>
+      <div class="info-card">
+        <h4>Voluntariado</h4>
+        <p>Saiba como ajudar nos eventos de adoção e feiras da Secretaria de Meio Ambiente.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <h3>ARCA</h3>
+      <p>Apoio e Resgate à Causa Animal. Uma iniciativa da Prefeitura da Serra focada na saúde pública e no respeito aos animais.</p>
+    </div>
+    <div>
+      <h3>MENU</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Quem Somos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 ARCA | Prefeitura da Serra – ES. Todos os direitos reservados.</div>
+
+</body>
+</html>

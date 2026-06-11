@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Adoção</title>
+  <link rel="stylesheet" href="styleADOCAO.css">
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <nav>
+<div class="nav-logo">
+    <img src="/iconesrra-removebg-preview.png" alt="" class="escudo">
+    <span>SERRA</span>
+</div>
+    <ul>
+          <li><a href="/index.html">Home</li>
+
+      <li class="item-servicos">
+        <span class="btn-servicos" onclick="abrirMenu()">Serviços ▾</span>
+        <ul class="submenu" id="submenu">
+        <li><a href="/servicos.html">Vacinação</a></li>
+        <li><a href="/servicos.html">Castração</a></li>
+        <li><a href="/doacao.html">Doação</a></li>
+        <li><a href="/denuncia.html">Denúncia</a></li>
+        <li><a href="/resgate.html">Resgate</a></li>
+        <li><a href="/adocao.html">Adoção</a></li>
+
+        </ul>
+      </li>
+
+      <li><a href="#">Quem Somos</a></li>
+      <li><a href="/campanhas.html">Campanhas Públicas</a></li>
+    </ul>
+<a href="/login.html"><span class="nav-user">👤</span></a>
+  </nav>
+  <script>
+    function abrirMenu() {
+      var submenu = document.getElementById("submenu");
+      if (submenu.classList.contains("aberto")) {
+        submenu.classList.remove("aberto");
+      } else {
+        submenu.classList.add("aberto");
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+  
+  <div class="hero">
+    <div class="hero-texto">
+      <span class="hero-badge">Encontre um novo melhor amigo</span>
+      <h1>Mude uma vida,<br><span class="laranja">adote com amor.</span></h1>
+      <p>Existem centenas de animais esperando por um lar na Serra. Cada adoção é um ato de compaixão que transforma o destino de um ser que só quer carinho.</p>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=600" alt="gatinho">
+      <div class="hero-counter">
+        <strong>+500</strong>
+        Vidas salvas este ano 🐾
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  
+  <section class="como-adotar">
+    <h2>Como Adotar</h2>
+    <p class="sub">O processo é simples, mas requer compromisso e responsabilidade para garantir o bem-estar do animal.</p>
+    <div class="passos">
+      <div class="passo">
+        <div class="circulo">🔍</div>
+        <h3>Escolha</h3>
+        <p>Encontre o perfil do seu futuro pet.</p>
+      </div>
+      <div class="passo">
+        <div class="circulo">📋</div>
+        <h3>Entrevista</h3>
+        <p>Converse com nossa equipe de bem-estar animal.</p>
+      </div>
+      <div class="passo">
+        <div class="circulo">✓</div>
+        <h3>Visita</h3>
+        <p>Confirmamos o novo lar para a chegada segura.</p>
+      </div>
+      <div class="passo ativo">
+        <div class="circulo">🤝</div>
+        <h3>Amor</h3>
+        <p>Assine o termo e comece uma nova história.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  
+  <div class="filtros">
+    <strong>Filtrar:</strong>
+    <a href="#" class="ativo">Todos</a>
+    <a href="#">Especie</a>
+    <a href="#">Porte</a>
+    <a href="#">Idade</a>
+    <a href="#">Sexo</a>
+  </div>
+
+
+
+
+
+
+
+
+  
+  <section class="animais">
+
+    <div class="animal-card">
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=400" alt="Bento">
+        <div class="bookmark">🔖</div>
+      </div>
+      <div class="animal-info">
+        <h3>Bento</h3>
+        <div class="detalhes">Macho • Adulto • Porte Pequeno</div>
+        <div class="tags">
+          <span class="tag tag-verde">Vacinado</span>
+          <span class="tag tag-azul">Castrado</span>
+          <span class="tag tag-cinza">Dócil</span>
+        </div>
+        <a href="#" class="conhecer">Conhecer Bento</a>
+      </div>
+    </div>
+
+    <div class="animal-card">
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=400" alt="Luna">
+        <div class="bookmark">🔖</div>
+      </div>
+      <div class="animal-info">
+        <h3>Luna</h3>
+        <div class="detalhes">Fêmea • Jovem • Porte Médio</div>
+        <div class="tags">
+          <span class="tag tag-verde">Vermifugada</span>
+          <span class="tag tag-cinza">Calma</span>
+        </div>
+        <a href="#" class="conhecer">Conhecer Luna</a>
+      </div>
+    </div>
+
+    <div class="animal-card">
+      <div class="foto">
+        <img src="https://images.unsplash.com/photo-1591160690555-5d7e4f3a3b6a?w=400" alt="Thor">
+        <div class="bookmark">🔖</div>
+      </div>
+      <div class="animal-info">
+        <h3>Thor</h3>
+        <div class="detalhes">Macho • Filhote • Porte Pequeno</div>
+        <div class="tags">
+          <span class="tag tag-verm">Carente</span>
+          <span class="tag tag-verde">Ativo</span>
+        </div>
+        <a href="#" class="conhecer">Conhecer Thor</a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+  
+  <div class="carregar">
+    <button>Carregar mais animais</button>
+  </div>
+
+
+
+
+
+
+
+
+  
+  <footer>
+    <div>
+      <h3>ARCA</h3>
+      <p>Apoio e Resgate à Causa Animal. Uma iniciativa da Prefeitura da Serra focada na saúde pública e no respeito aos animais.</p>
+    </div>
+    <div>
+      <h3>MENU</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Quem Somos</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 ARCA | Prefeitura da Serra – ES. Todos os direitos reservados.</div>
+
+</body>
+</html>

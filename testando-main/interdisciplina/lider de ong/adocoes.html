@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Acompanhamento de Adoções</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; display: flex; min-height: 100vh; background: #f5f5f5; }
+
+   
+
+
+
+
+
+    .sidebar {
+      width: 180px; background: #2d5a35; min-height: 100vh;
+      display: flex; flex-direction: column; padding: 20px 0; flex-shrink: 0;
+    }
+    .sidebar-logo {
+      color: white; font-size: 13px; font-weight: bold;
+      padding: 0 20px 24px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px;
+    }
+    .sidebar-logo .escudo { font-size: 22px; display: block; margin-bottom: 4px; }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li a {
+      display: block; padding: 11px 20px;
+      color: #a5d6a7; text-decoration: none; font-size: 13px; letter-spacing: 0.5px;
+    }
+    .sidebar ul li.ativo a { color: white; font-weight: bold; border-bottom: 2px solid white; padding-bottom: 9px; }
+
+   
+
+
+
+
+
+    .content { flex: 1; padding: 36px 40px; }
+    .content h1 { font-size: 20px; font-weight: bold; margin-bottom: 4px; }
+    .content .sub { font-size: 12px; color: #888; margin-bottom: 20px; }
+
+    
+
+
+
+
+
+    .contadores { display: flex; gap: 24px; margin-bottom: 28px; }
+    .contador { text-align: left; }
+    .contador .num { font-size: 22px; font-weight: 900; }
+    .contador .num.amarelo { color: #e07b2e; }
+    .contador .label { font-size: 11px; color: #888; margin-top: 2px; }
+
+    
+
+
+
+
+
+    .kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+    .coluna { background: white; border-radius: 10px; overflow: hidden; }
+    .col-header {
+      padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px; font-weight: bold; border-bottom: 1px solid #eee;
+    }
+    .col-header .ic { font-size: 14px; }
+    .col-header .add { color: #3a7d44; font-size: 16px; cursor: pointer; }
+
+ 
+
+
+
+
+    .tag-interessado  { background: #fff8e1; }
+    .tag-analise      { background: #e3f2fd; }
+    .tag-aprovado     { background: #e8f5e9; }
+    .tag-concluido    { background: #f3e5f5; }
+
+    .col-body { padding: 10px; display: flex; flex-direction: column; gap: 10px; }
+
+    
+
+
+
+
+
+    .animal-card {
+      border: 1px solid #eee; border-radius: 8px; padding: 12px; background: #fafafa;
+    }
+    .animal-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .animal-top img {
+      width: 36px; height: 36px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    }
+    .animal-top .nome { font-size: 13px; font-weight: bold; }
+    .animal-top .tipo { font-size: 10px; color: #888; }
+
+    .adotante { font-size: 11px; color: #555; margin-bottom: 10px; }
+    .adotante strong { display: block; font-size: 12px; color: #333; }
+
+    .tag-pequena {
+      font-size: 10px; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 8px;
+    }
+    .tag-triagem   { background: #fff3e0; color: #e65100; }
+    .tag-prioridade { background: #fce4ec; color: #c62828; }
+
+    .card-btns { display: flex; justify-content: space-between; align-items: center; }
+    .card-btns a { font-size: 11px; color: #3a7d44; text-decoration: none; }
+    .card-btns .data { font-size: 10px; color: #aaa; }
+
+  
+
+
+
+
+
+    .col-footer {
+      padding: 8px; text-align: center; border-top: 1px solid #eee; cursor: pointer; color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+ 
+
+
+
+
+
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <span class="escudo">🛡️</span>
+      SERRA
+    </div>
+    <ul>
+      <li><a href="#">MINHA CONTA</a></li>
+      <li><a href="#">CAMPANHAS</a></li>
+      <li><a href="#">ANIMAIS</a></li>
+      <li><a href="/lider de ong/doacoes-ong.html">DOAÇÕES</a></li>
+      <li class="ativo"><a href="#">ADOÇÕES</a></li>
+      <li><a href="#">NOTIFICAÇÕES</a></li>
+      <li><a href="#">ACESSOS</a></li>
+      <li><a href="#">SESSÕES</a></li>
+      <li><a href="#">PARCEIROS</a></li>
+      <li><a href="#">HOME</a></li>
+    </ul>
+  </div>
+
+
+
+
+
+
+  <div class="content">
+    <h1>Acompanhamento de Adoções</h1>
+    <p class="sub">Gestão do funil de adoção e triagem de interessados.</p>
+
+
+
+
+
+
+
+    <div class="contadores">
+      <div class="contador">
+        <div class="num amarelo">⭐ 2</div>
+        <div class="label">Em Análise</div>
+      </div>
+      <div class="contador">
+        <div class="num">1</div>
+        <div class="label">Aprovado</div>
+      </div>
+      <div class="contador">
+        <div class="num">45</div>
+        <div class="label">Concluído</div>
+      </div>
+      <div class="contador">
+        <div class="num">5</div>
+        <div class="label">Impossível</div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="kanban">
+
+
+
+
+
+
+      <div class="coluna">
+        <div class="col-header tag-interessado">
+          <span>⭐ Interessado</span>
+          <span class="add">+</span>
+        </div>
+        <div class="col-body">
+          <div class="animal-card">
+            <div class="animal-top">
+              <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=100" alt="Max">
+              <div>
+                <div class="nome">Max 🐾</div>
+                <div class="tipo">Sr. Arthur Silva</div>
+              </div>
+            </div>
+            <div class="card-btns">
+              <span class="data">12 Out</span>
+              <a href="#">Ver Detalhes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-footer">∨</div>
+      </div>
+
+
+
+
+
+      <div class="coluna">
+        <div class="col-header tag-analise">
+          <span>🔍 Em Análise</span>
+          <span class="add">+</span>
+        </div>
+        <div class="col-body">
+          <div class="animal-card">
+            <div class="animal-top">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100" alt="Thor">
+              <div>
+                <div class="nome">Thor 🐾</div>
+                <div class="tipo">Sr. Carlos Borges</div>
+              </div>
+            </div>
+            <div class="adotante">
+              <strong>🌐 Aguardo Visita</strong>
+            </div>
+            <div class="card-btns">
+              <span class="data">—</span>
+              <a href="#">Ver Detalhes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-footer">∨</div>
+      </div>
+
+      
+
+
+
+
+
+      <div class="coluna">
+        <div class="col-header tag-aprovado">
+          <span>✅ Aprovado</span>
+          <span class="add">+</span>
+        </div>
+        <div class="col-body">
+          <div class="animal-card">
+            <div class="animal-top">
+              <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=100" alt="Nina">
+              <div>
+                <div class="nome">Nina 🐾</div>
+                <div class="tipo">Sr. João Claus</div>
+              </div>
+            </div>
+            <span class="tag-pequena tag-prioridade">Prioridade Resgate</span>
+            <div class="card-btns">
+              <span class="data">—</span>
+              <a href="#">Ver Detalhes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-footer">∨</div>
+      </div>
+
+
+
+
+
+      
+      <div class="coluna">
+        <div class="col-header tag-concluido">
+          <span>🏁 Concluído</span>
+          <span class="add">+</span>
+        </div>
+        <div class="col-body">
+          <div class="animal-card">
+            <div class="animal-top">
+              <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100" alt="Rex">
+              <div>
+                <div class="nome">Rex 🐾</div>
+                <div class="tipo">Sr. Família Correa</div>
+              </div>
+            </div>
+            <div class="card-btns">
+              <span class="data">02 Out</span>
+              <a href="#">Ver Detalhes</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-footer">∨</div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

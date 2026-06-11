@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal ARCA - Cadastro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      background: white;
+    }
+
+.foto {
+      width: 45%;
+      height: 100vh;
+      background: url('https://premierpet.com.br/wp-content/uploads/2025/03/model-banner-linguagemcorporal-mobile-v1-1024x1024.png') center/cover;
+    }
+
+    .form-area {
+      width: 55%;
+      height: 100vh;
+      padding: 60px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .titulo-cadastro {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .duas-colunas {
+      display: flex;
+      gap: 14px;
+    }
+
+    .duas-colunas div {
+      flex: 1;
+    }
+
+    .btn-cadastrar {
+      width: 100%;
+      padding: 12px;
+      background: #2e7d32;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    .ou {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    .btn-google {
+      width: 100%;
+      padding: 10px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="foto"></div>
+
+  <div class="form-area">
+
+    <div class="logo">🐾 ARCA | Portal ARCA</div>
+    <div class="subtitle">Bem-vindo! Por favor, insira seus dados.</div>
+    <div class="titulo-cadastro">CADASTRO</div>
+
+    <label>Nome</label>
+    <input type="text" placeholder="Exemplo de Nome">
+
+    <label>E-mail</label>
+    <input type="email" placeholder="exemplo@email.com">
+
+    <label>CPF</label>
+    <input type="text" placeholder="000.000.000-00">
+
+    <div class="duas-colunas">
+      <div>
+        <label>Data de Nascimento</label>
+        <input type="text" placeholder="dd/mm/aaaa">
+      </div>
+      <div>
+        <label>CEP</label>
+        <input type="text" placeholder="00000-000">
+      </div>
+    </div>
+
+    <label>Senha</label>
+    <input type="password" placeholder="••••••••">
+
+    <label>Confirme sua senha</label>
+    <input type="password" placeholder="••••••••">
+
+    <button class="btn-cadastrar">Cadastre-se</button>
+
+    <div class="ou">ou continue com</div>
+
+    <button class="btn-google">🔍 Google</button>
+
+  </div>
+
+  <script>
+    document.querySelector('.btn-cadastrar').addEventListener('click', function () {
+      alert('✅ Cadastro realizado com sucesso!');
+      window.location.href = '../index.html'});
+  </script>
+
+</body>
+</html>
